@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Sign in Buttons</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      text-align: center;
+      padding-top: 3rem;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .auth-btn {
+      transition: background-color 0.3s, box-shadow 0.3s;
+      padding: 12px 16px 12px 42px;
+      margin: 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-position: 12px 11px;
+      background-size: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      width: 260px;
+      text-align: left;
+    }
+
+    .auth-btn:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #c8dafc;
+    }
+
+    .auth-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .google-btn {
+      background-color: white;
+      color: #555;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiLz48cGF0aCBkPSJNOSAxOGMyLjQgMCA0LjUtLjggNi0yLjJsLTMtMi4yYTUuNCA1LjQgMCAwIDEtOC0yLjlIMXYzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIi8+PHBhdGggZD0iTTQgMTAuN2E1LjQgNS40IDAgMCAxIDAtMy40VjVIMWE5IDkgMCAwIDAgMCA4bDMtMi4zeiIgZmlsbD0iI0ZCQkMwNSIvPjxwYXRoIGQ9Ik05IDMuNmMxLjMgMCAyLjUuNCAzLjQgMS4zTDE1IDIuM2E5IDkgMCAwIDAtMTQgM2wzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIvPjxwYXRoIGQ9Ik0wIDBoMTh2MThIMHoiLz48L2c+PC9zdmc+');
+    }
+
+    .google-btn:hover {
+      background-color: #f1f1f1;
+    }
+
+    .github-btn {
+      background-color: white;
+      color: black;
+      background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg');
+    }
+  </style>
+</head>
+<body>
+<!-- Google Login -->
+<form action="/oauth2/authorization/google" method="GET">
+  <button type="submit" class="auth-btn google-btn">
+    Sign in with Google
+  </button>
+</form>
+
+<!-- GitHub Login -->
+<form action="/oauth2/authorization/github" method="GET">
+  <button type="submit" class="auth-btn github-btn">
+    Sign in with GitHub
+  </button>
+</form>
+
+</body>
+</html>
